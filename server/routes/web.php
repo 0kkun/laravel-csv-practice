@@ -12,3 +12,4 @@
 */
 
 Route::get('/csv', 'CsvController@index')->name('csv.index');
+Route::get('/export', 'CsvController@export')->name('csv.export');
