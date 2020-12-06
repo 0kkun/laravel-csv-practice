@@ -11,5 +11,7 @@
 |
 */
 
-Route::get('/csv', 'CsvController@index')->name('csv.index');
-Route::get('/export', 'CsvController@export')->name('csv.export');
+Route::name('csv.')->prefix('csv')->group(function(){
+    Route::get('/', 'CsvController@index')->name('index');
+    Route::post('/download', 'CsvController@download')->name('download');
+});
