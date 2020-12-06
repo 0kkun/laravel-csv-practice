@@ -3,16 +3,9 @@
 namespace App\Services\Csv;
 
 use Illuminate\Support\Collection;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 interface CsvServiceInterface
 {
-    /**
-     * CSVダウンロードを実行
-     *
-     * @param string $file_name
-     * @param array $head
-     * @param array $data
-     * @return void
-     */
-    public function download(string $file_name, array $head, array $data): void;
+
 }
